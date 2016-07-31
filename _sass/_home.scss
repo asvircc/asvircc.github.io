@@ -38,13 +38,13 @@
     .post-meta {
     	font-size: $small-font-size;
     	color: #666;
-        margin: 0 20px;
+        margin: 0 0px;
         margin-bottom: .5em;
     }
     .post-excerpt {
         &, * {
             font-size: $small-font-size;
-            line-height: $small-font-size;
+            line-height: 1.5 * $small-font-size;
             padding-top: 0;
             padding-bottom: 0;
 	        color: #333;
@@ -70,7 +70,7 @@
                 opacity: 1;
             }
         }
-        margin: 0 20px;
+        margin: 0 0px;
     }
     @include media-query($on-palm) {
 		padding: 10px;
