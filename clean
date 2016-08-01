@@ -1,0 +1,5 @@
+#!/bin/bash
+jekyll clean
+sync
+
+rm -rf .sass-cache

@@ -1,6 +1,6 @@
 # Site settings
 title: asvir.cc
-url: "http://asvircc.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+url: "asvir.cc"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
 baseurl: "" # the prefix of your site uri, eg. `/jekyll-theme-EasyBook` or just one slash `/`
 #timezone: Asia/Chongqing
 description: >
@@ -9,7 +9,7 @@ description: >
 # Your information
 email: asvircc@asvir.cc
 author: Asvir
-avatar: "./images/user/avatar.jpg"
+avatar: "/images/user/avatar.jpg"
 profile: One Asvir.cc
 #twitter_username: twitter_username
 #github_username:  github_username
