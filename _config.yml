@@ -9,7 +9,7 @@ description: >
 # Your information
 email: asvircc@asvir.cc
 author: Asvir
-avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
+avatar: "./images/user/avatar.jpg"
 profile: One Asvir.cc
 #twitter_username: twitter_username
 #github_username:  github_username
