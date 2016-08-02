@@ -15,4 +15,4 @@ author: asvir
 
 所以最终放弃WordPres，开始使用Jekyll。
 
-最后主题使用[laobubu](https://github.com/laobubu/)提供的，还在修改中。
+最后主题由[laobubu](https://github.com/laobubu/)提供的，目前还在修改。
