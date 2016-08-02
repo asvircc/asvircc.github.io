@@ -13,7 +13,7 @@ layout: default
         </h2>
         
         <div class="post-meta">
-          {% if post.author %}  &nbsp; <i class="icon-user"></i>&nbsp;{{ post.author }}{% endif %}
+          {% if post.author %}<i class="icon-user"></i>&nbsp;{{ post.author }}{% endif %}
           {% if post.meta %} &nbsp;{{ post.meta }}{% endif %}
            &nbsp; <i class="icon-time"></i>&nbsp;{{ post.date | date: "%Y-%m-%d" }}
           </div>
