@@ -5,9 +5,11 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta"> <i class="icon-time"></i> &nbsp;{{ page.date | date: "%Y-%m-%d" }} 
-    {% if page.author %} &nbsp; <i class="icon-user"></i>&nbsp;{{ page.author }}{% endif %}
-    {% if page.meta %} &nbsp;{{ page.meta }}{% endif %}</p>
+    <p class="post-meta"> 
+      {% if page.author %}<i class="icon-user"></i>&nbsp;{{ page.author }}{% endif %}
+      {% if page.meta %} &nbsp;{{ page.meta }}{% endif %}
+       &nbsp; <i class="icon-time"></i>&nbsp;{{ page.date | date: "%Y-%m-%d" }} 
+    </p>
   </header>
 
   <article class="post-content">
