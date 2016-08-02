@@ -147,23 +147,33 @@
 		border-radius: 100%;
 		margin: 20px auto;
 		display: block;
+		box-shadow: 1px 1px 1px 1px #aaa;
 	}
 	.name {
 		font-size: $base-font-size;
 	}
 	.contact {
 		margin-top: 10px;
+		height: 35px;
 		a {
-			background: #999;
-			color: #eee;
-			padding: 5px 10px;
+			background: rgba(255, 255, 255, 0.82);
+			width: 35px;
+			height: 35px;
+			color: #666;
 			text-decoration: none;
-			border-radius: 5px;
+			border-radius: 60px;
     		white-space: nowrap;
-			
+			line-height: 35px;
+ 			font-size: 16px;
+ 			display:inline-block;
+ 			margin: 5px;
+ 			vertical-align: middle;
+ 			border-width: 1px;
+ 			border-color: #000;
+ 			box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
 			&:hover {
 				transition: background 0.3s ease;
-				background: #666;
+				background: #eee;
 			}
 		}
 	}

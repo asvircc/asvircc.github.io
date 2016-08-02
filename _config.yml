@@ -4,15 +4,16 @@ url: "asvir.cc"    # the protocol and hostname of your site, eg. `http://laobubu
 baseurl: "" # the prefix of your site uri, eg. `/jekyll-theme-EasyBook` or just one slash `/`
 #timezone: Asia/Chongqing
 description: >
-  One Asvir.cc
+  one asvir.cc
 
 # Your information
 email: asvircc@asvir.cc
-author: Asvir
+author: asvir
 avatar: "/images/user/avatar.jpg"
-profile: One Asvir.cc
+profile: one asvir.cc
 #twitter_username: twitter_username
-#github_username:  github_username
+github_username:  asvircc
+weibo_username:  asvircc
 
 # Comment Service (Disqus or 多说)
 #  choose one and un-comment the line to active it

@@ -5,5 +5,5 @@ permalink: /about/
 public: true
 ---
 
-Welcome to this asvir.cc
+Welcome to asvircc
 

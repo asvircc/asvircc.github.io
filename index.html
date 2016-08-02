@@ -3,7 +3,6 @@ layout: default
 ---
 
 <div class="home">
-  <a class="rss-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS Feed</a>
   <h1 class="page-heading">文章列表</h1>
 
   <ul class="post-list">
@@ -13,11 +12,15 @@ layout: default
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         
-        <div class="post-meta">{{ post.date | date: "%Y/%m/%d" }} &nbsp;字数{{ page.content | number_of_words }}</div>
+        <div class="post-meta">
+          <i class="icon-time"></i>&nbsp;{{ post.date | date: "%Y-%m-%d" }}
+          {% if post.author %}  &nbsp; <i class="icon-user"></i>&nbsp;{{ post.author }}{% endif %}
+          {% if post.meta %} &nbsp;{{ post.meta }}{% endif %}
+          </div>
         <div class="post-excerpt">
           {{ post.excerpt }}
           <p>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">阅读更多 &raquo;</a>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">阅读全文 &raquo;</a>
           </p>
         </div>
       </li>
