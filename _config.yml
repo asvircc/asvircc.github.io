@@ -4,13 +4,13 @@ url: "asvir.cc"    # the protocol and hostname of your site, eg. `http://laobubu
 baseurl: "" # the prefix of your site uri, eg. `/jekyll-theme-EasyBook` or just one slash `/`
 #timezone: Asia/Chongqing
 description: >
-  one asvir.cc
+  asvir.cc
 
 # Your information
 email: asvircc@asvir.cc
-author: asvir
+author: asvircc
 avatar: "/images/user/avatar.jpg"
-profile: one asvir.cc
+profile: coder
 #twitter_username: twitter_username
 github_username:  asvircc
 weibo_username:  asvircc
