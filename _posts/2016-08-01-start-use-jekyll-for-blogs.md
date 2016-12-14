@@ -3,7 +3,7 @@ layout: post
 title:  开始使用Jekyll写博客
 date:   2016-08-01 00:05
 categories: 记录
-author: asvir
+author: asvircc
 ---
 
 开始使用WordPress，有很多主题，插件也很多，各种个性化设置。这对新手的诱惑是不言而喻的，这个是WordPress的优点和优势。
