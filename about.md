@@ -9,8 +9,8 @@ public: true
 
 ||
 |-|-|
-|Language|C、Objective-C|
-|Platform|Linux、macOS、iOS|
+|Language|C、Objective-C、Java|
+|Platform|Linux、macOS、iOS、Android|
 |Email|[asvircc@asvir.cc](mailto://asvircc@asvir.cc)|
 |Github|[https://github.com/{{ site.github_username }}](https://github.com/{{ site.github_username }})|
 
