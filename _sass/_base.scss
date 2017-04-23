@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	font-family: $base-font-family;
 	font-size: $base-font-size;
+	font-weight: $base-font-weight;
 	line-height: $base-line-height;
 }
 a {
@@ -21,6 +22,7 @@ blockquote {
 code,pre {
 	font-family:  $code-font-family;
 	font-size: $code-font-size;
+	font-weight: $code-font-weight;
 }
 code {
 	color: #900;
