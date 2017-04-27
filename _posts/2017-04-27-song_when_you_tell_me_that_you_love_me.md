@@ -6,72 +6,42 @@ categories: Song
 author: asvircc
 ---
 
-I wanna call the stars down from the sky
+I wanna call the stars down from the sky<br>
+I wanna live a day that never die<br>
+I wanna change the world only for you<br>
+All impossible i wanna do<br>
 
-I wanna live a day that never die
 
-I wanna change the world only for you
+I wanna hold you close under the rain<br>
+I wanna kiss you smile and feel your pain<br>
+I know what's beautiful looking at you<br>
+In a world of lies you are the turth<br>
 
-All impossible i wanna do
 
-<br>
+And baby, everytime you touch me I become a hero<br>
+I'll make you safe no matter where you are and bring you everything you ask for<br>
+Nothing is above me<br>
+I'm shinning like a candle in the dark when you tell me that you love me<br>
+I wanna make you see just what I was<br>
+Show you the loneliness and what it does<br>
 
-I wanna hold you close under the rain
 
-I wanna kiss you smile and feel your pain
+You walked into my life to stop my tears<br>
+Everythings is easy now<br>
+I have you here<br>
 
-I know what's beautiful looking at you
 
-In a world of lies you are the turth
+And baby, everytime you touch me I become a hero<br>
+I'll make you safe no matter where you are and bring you everything you ask for<br>
+Nothing is above me<br>
+I'm shining like a candle when you tell me that you love me<br>
 
-<br>
+In a world without you I would always hunger and I need is you love to take me stronger<br>
+Everytime you touch me I become a hero<br>
+I'll make you safe no matter where you are and bring you everything you ask for<br>
+Nothing is above me<br>
+I'm shining like a candle in the dark when you tell me that you love me<br>
 
-And baby, everytime you touch me I become a hero
-
-I'll make you safe no matter where you are and bring you everything you ask for
-
-Nothing is above me
-
-I'm shinning like a candle in the dark when you tell me that you love me
-
-I wanna make you see just what I was
-
-Show you the loneliness and what it does
-
-<br>
-
-You walked into my life to stop my tears
-
-Everythings is easy now
-
-I have you here
-
-<br>
-
-And baby, everytime you touch me I become a hero
-
-I'll make you safe no matter where you are and bring you everything you ask for
-
-Nothing is above me
-
-I'm shining like a candle when you tell me that you love me
-
-<br>
-
-In a world without you I would always hunger and I need is you love to take me stronger
-
-Everytime you touch me I become a hero
-
-I'll make you safe no matter where you are and bring you everything you ask for
-
-Nothing is above me
-
-I'm shining like a candle in the dark when you tell me that you love me
-
-<br>
-
-When you tell me that you love me 
-
-When you tell me that you love me
-
-When you tell me that you love me
+When you tell me that you love me<br>
+When you tell me that you love me<br>
+When you tell me that you love me<br>
