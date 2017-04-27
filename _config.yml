@@ -10,15 +10,15 @@ description: >
 email: asvircc@asvir.cc
 author: asvircc
 avatar: "/images/user/avatar.jpg"
-profile: coder
+profile: 
 #twitter_username: twitter_username
 github_username:  asvircc
-weibo_username:  asvircc
+#weibo_username:  asvircc
 
 # Comment Service (Disqus or 多说)
 #  choose one and un-comment the line to active it
-#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
-duoshuo_shortname: asvircc  # get one: http://duoshuo.com/create-site/
+disqus_shortname: asvir-cc   # get one: https://disqus.com/admin/signup/
+#duoshuo_shortname: asvircc  # get one: http://duoshuo.com/create-site/
 
 permalink: /archivers/:title
 gems:
