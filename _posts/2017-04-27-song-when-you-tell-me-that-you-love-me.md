@@ -6,6 +6,11 @@ categories: Song
 author: asvircc
 ---
 
+<audio 
+	autoplay="autoplay"
+	loop="loop"
+	src="http://op7e8nyi8.bkt.clouddn.com/When%20You%20Tell%20Me%20That%20You%20Love%20Me.mp4"></audio> 
+
 I wanna call the stars down from the sky<br>
 I wanna live a day that never die<br>
 I wanna change the world only for you<br>
