@@ -6,11 +6,6 @@ categories: Song
 author: asvircc
 ---
 
-<audio 
-	autoplay="autoplay"
-	loop="loop"
-	src="http://op7e8nyi8.bkt.clouddn.com/When%20You%20Tell%20Me%20That%20You%20Love%20Me.mp4"></audio> 
-
 I wanna call the stars down from the sky<br>
 I wanna live a day that never die<br>
 I wanna change the world only for you<br>
@@ -50,3 +45,8 @@ I'm shining like a candle in the dark when you tell me that you love me<br>
 When you tell me that you love me<br>
 When you tell me that you love me<br>
 When you tell me that you love me<br>
+
+
+<audio 
+	autoplay="autoplay"
+	src="http://op7e8nyi8.bkt.clouddn.com/When%20You%20Tell%20Me%20That%20You%20Love%20Me.mp4"></audio> 
