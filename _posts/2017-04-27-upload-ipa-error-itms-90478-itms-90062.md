@@ -34,7 +34,7 @@ author: asvircc
 ### 延伸
 1. `CFBundleShortVersionString` 和 `CFBundleVersion` 没有直接的关系。<br>
 2. 通过代码获取到版本号，不要直接拿字符串对比，要按照每个版本位单独对比。<br>
-3. 建议 APP 版本号按照 `development`, `alpha`, `beta`, and `final candidate`, by `d`, `a`, `b`, and `fc`方式处理。<br>
+3. 建议 APP 版本号 `CFBundleVersion` 按照 `development`, `alpha`, `beta`, and `final candidate`, by `d`, `a`, `b`, and `fc`方式处理。<br>
 
 PS: 公司 APP 是自己在开发维护。如果 Build 时间为 2017.02.02 18:00，所以自己为了方便 `CFBundleVersion` 一般写成：201702021800.
 

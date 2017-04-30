@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>asvir.cc</title>
+    <description>asvir.cc
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 30 Apr 2017 15:25:21 +0800</pubDate>
+    <lastBuildDate>Sun, 30 Apr 2017 15:25:21 +0800</lastBuildDate>
+    <generator>Jekyll v3.4.2</generator>
+    
+      <item>
+        <title>ERROR ITMS-90478, ERROR ITMS-90062</title>
+        <description>&lt;p&gt;最近助理反馈一个问题，APP 无法连接机器。具体 APP 名字都快没印象了。查看了 APP 更新信息，15年8月最后一次更新。问题还好，很快搞定了。打包上传的时候出错了，给了下面的提示信息&lt;/p&gt;
+
+&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ERROR ITMS-90478&lt;/strong&gt;: “Invalid Version. The build with the version “1.46” can’t be imported because a later version has been closed for new build submissions. Choose a different version number.”&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ERROR ITMS-90062&lt;/strong&gt;: “This bundle is invalid. The value for key CFBundleShortVersionString [1.5] in the Info.plist file must contain a higher version than that of the previously approved version [1.46].”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：其实写的很清楚了，最新的线上版本号 1.46，所以再次提交，版本号要比 1.46 高。1.5 版本号是低于 1.46 版本号的。&lt;br /&gt;
+&lt;strong&gt;解决&lt;/strong&gt;：方法比较简单，把 &lt;code class=&quot;highlighter-rouge&quot;&gt;TAGETS&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;General&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Idntity&lt;/code&gt; 中 &lt;code class=&quot;highlighter-rouge&quot;&gt;Version&lt;/code&gt; : 1.5 修改成 1.50 可以正常上传。原因往下看。&lt;br /&gt;
+&lt;strong&gt;是不是很疑惑&lt;/strong&gt;：1.5 不等于 1.50 吗，1.5 不大于 1.46 吗。&lt;/p&gt;
+
+&lt;h3 id=&quot;原因&quot;&gt;原因&lt;/h3&gt;
+
+&lt;p&gt;苹果有关于 &lt;strong&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-111349&quot; title=&quot;CFBundleVersion&quot;&gt;CFBundleVersion&lt;/a&gt;&lt;/strong&gt; 和 &lt;strong&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-111349&quot; title=&quot;CFBundleShortVersionString&quot;&gt;CFBundleShortVersionString&lt;/a&gt;&lt;/strong&gt; 的详细解释。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleShortVersionString&lt;/code&gt; 由三个分开的整数来代表版本号。如，1.3.2，每个整数都有不同的含义：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; Major Revision&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;3&lt;/code&gt; New Feature or Major Changes Revision&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;2&lt;/code&gt; Maintenance Release Revision&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;版本号高低对比是按照每个对应的位置来进行对比的。所以 1.5 与 1.46 版本号高低主要是通过 new feature or major changes 版本号对比，很明显 5 &amp;lt; 46。&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleVersion&lt;/code&gt; 与 &lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleShortVersionString&lt;/code&gt; 类似。&lt;/p&gt;
+
+&lt;h3 id=&quot;延伸&quot;&gt;延伸&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleShortVersionString&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleVersion&lt;/code&gt; 没有直接的关系。&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;通过代码获取到版本号，不要直接拿字符串对比，要按照每个版本位单独对比。&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;建议 APP 版本号 &lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleVersion&lt;/code&gt; 按照 &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;alpha&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;beta&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;final candidate&lt;/code&gt;, by &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;fc&lt;/code&gt;方式处理。&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;PS: 公司 APP 是自己在开发维护。如果 Build 时间为 2017.02.02 18:00，所以自己为了方便 &lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleVersion&lt;/code&gt; 一般写成：201702021800.&lt;/p&gt;
+
+&lt;h3 id=&quot;参考&quot;&gt;参考&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/19726988/what-values-should-i-use-for-cfbundleversion-and-cfbundleshortversionstring&quot; title=&quot;What values should I use for CFBundleVersion and CFBundleShortVersionString?&quot;&gt;What values should I use for CFBundleVersion and CFBundleShortVersionString?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-111349&quot; title=&quot;CFBundleShortVersionString&quot;&gt;CFBundleShortVersionString&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-111349&quot; title=&quot;CFBundleVersion&quot;&gt;CFBundleVersion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- URLs --&gt;
+
+</description>
+        <pubDate>Thu, 27 Apr 2017 23:10:00 +0800</pubDate>
+        <link>http://localhost:4000/archivers/upload-ipa-error-itms-90478-itms-90062</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/upload-ipa-error-itms-90478-itms-90062</guid>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>植物</title>
+        <description>&lt;p&gt;文章始于2017年4月27日，以后会持续更新。&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;五瓣梅花&quot;&gt;五瓣梅花&lt;/h3&gt;
+
+&lt;p&gt;iPhone 6s白天拍摄很难对上焦，晚上开闪光拍视频对焦，选好画面就可以拍单个照片。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/349c9ed893a998cac575d4be018434e5.jpg&quot; alt=&quot;五瓣梅&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/dd23b625dd1fe89420502101916fdac6.jpg&quot; alt=&quot;五瓣梅&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 27 Apr 2017 22:20:00 +0800</pubDate>
+        <link>http://localhost:4000/archivers/flowers_other_plants</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/flowers_other_plants</guid>
+        
+        
+        <category>爱好</category>
+        
+      </item>
+    
+      <item>
+        <title>When You Tell Me That You Love Me</title>
+        <description>&lt;p&gt;I wanna call the stars down from the sky&lt;br /&gt;
+I wanna live a day that never die&lt;br /&gt;
+I wanna change the world only for you&lt;br /&gt;
+All impossible i wanna do&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I wanna hold you close under the rain&lt;br /&gt;
+I wanna kiss you smile and feel your pain&lt;br /&gt;
+I know what’s beautiful looking at you&lt;br /&gt;
+In a world of lies you are the turth&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;And baby, everytime you touch me I become a hero&lt;br /&gt;
+I’ll make you safe no matter where you are and bring you everything you ask for&lt;br /&gt;
+Nothing is above me&lt;br /&gt;
+I’m shinning like a candle in the dark when you tell me that you love me&lt;br /&gt;
+I wanna make you see just what I was&lt;br /&gt;
+Show you the loneliness and what it does&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;You walked into my life to stop my tears&lt;br /&gt;
+Everythings is easy now&lt;br /&gt;
+I have you here&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;And baby, everytime you touch me I become a hero&lt;br /&gt;
+I’ll make you safe no matter where you are and bring you everything you ask for&lt;br /&gt;
+Nothing is above me&lt;br /&gt;
+I’m shining like a candle when you tell me that you love me&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In a world without you I would always hunger and I need is you love to take me stronger&lt;br /&gt;
+Everytime you touch me I become a hero&lt;br /&gt;
+I’ll make you safe no matter where you are and bring you everything you ask for&lt;br /&gt;
+Nothing is above me&lt;br /&gt;
+I’m shining like a candle in the dark when you tell me that you love me&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;When you tell me that you love me&lt;br /&gt;
+When you tell me that you love me&lt;br /&gt;
+When you tell me that you love me&lt;br /&gt;&lt;/p&gt;
+
+&lt;audio autoplay=&quot;autoplay&quot; src=&quot;http://op7e8nyi8.bkt.clouddn.com/When%20You%20Tell%20Me%20That%20You%20Love%20Me.mp4&quot;&gt;&lt;/audio&gt;
+</description>
+        <pubDate>Tue, 25 Apr 2017 22:37:00 +0800</pubDate>
+        <link>http://localhost:4000/archivers/song-when-you-tell-me-that-you-love-me</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/song-when-you-tell-me-that-you-love-me</guid>
+        
+        
+        <category>Song</category>
+        
+      </item>
+    
+      <item>
+        <title>雨天深圳</title>
+        <description>&lt;p&gt;两年已过，每天经过此处，景物依旧&lt;br /&gt;
+雨天傍晚，别样感觉&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;下班路景&quot;&gt;下班路景&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/4507f51313d8564c1e3f52867df6af27.jpg&quot; alt=&quot;下班路景1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/cf8ab8f4962995faaf9b900386a92ca2.jpg&quot; alt=&quot;下班路景2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;路边单车&quot;&gt;路边单车&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/2bff0f26c8ee9cc123c8bd6e8ab2bee0.jpg&quot; alt=&quot;共享单车1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/post/0579ddd6fa37c2d95a950a3576872629.jpg&quot; alt=&quot;共享单车2&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 25 Apr 2017 22:37:00 +0800</pubDate>
+        <link>http://localhost:4000/archivers/pictures_170425</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/pictures_170425</guid>
+        
+        
+        <category>图片日志</category>
+        
+      </item>
+    
+      <item>
+        <title>把显示器搬到客厅当电视看，效果不错</title>
+        <description>&lt;p&gt;电视机许久没有打开过，挪走电视机换上4K显示器，加上音箱，作周末休息看电影用。
+效果还不错。&lt;/p&gt;
+
+&lt;p&gt;《东邪西毒》  王家卫 
+&lt;img src=&quot;/images/post/IMG_4893.JPG&quot; alt=&quot;东邪西毒&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;《情书》 岩井俊二
+&lt;img src=&quot;/images/post/IMG_4892.JPG&quot; alt=&quot;情书&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Apr 2017 23:10:00 +0800</pubDate>
+        <link>http://localhost:4000/archivers/pictures_170423</link>
+        <guid isPermaLink="true">http://localhost:4000/archivers/pictures_170423</guid>
+        
+        
+        <category>图片日志</category>
+        
+      </item>
+    
+  </channel>
+</rss>
