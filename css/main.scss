@@ -28,6 +28,8 @@ $header-bg-hover: #78909C;
 $header-link: #CFD8DC;
 $header-fg: #FFF;
 
+$post-content-font-size: 14px;
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;

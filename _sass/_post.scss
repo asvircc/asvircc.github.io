@@ -27,7 +27,7 @@
     }
     .post-content {
         color: #333;
-        
+        font-size: $post-content-font-size;
         h1,h2,h3,h4,h5,h6 {
             color: #000;
         }
@@ -55,7 +55,7 @@
         }
 
         blockquote p {
-            font-size:$small-font-size;
+            #font-size:$small-font-size;
             margin-bottom: 10px;
             margin-top: 10px;
         }
