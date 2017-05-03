@@ -6,7 +6,7 @@ public: true
 ---
 <br>
 <br>
-<center><b>Nothing About Me :) </b></center>
+<center> <b> 邮箱 asvircc#asvir.cc </b> </center>
 <br>
 <br>
 
@@ -18,7 +18,7 @@ Coder
 
 Language:C、Objective-C
 Platform:Linux、macOS、iOS
-Email:asvircc@asvir.cc 
+Email:asvircc#asvir.cc 
 
 -->
 
