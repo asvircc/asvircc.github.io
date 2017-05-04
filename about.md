@@ -6,7 +6,7 @@ public: true
 ---
 <br>
 <br>
-<center> <b> 邮箱 asvircc#asvir.cc </b> </center>
+<center> <b> asvircc#asvir.cc </b> </center>
 <br>
 <br>
 
