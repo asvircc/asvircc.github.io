@@ -11,7 +11,7 @@ public: true
 
 |Language|C、Objective-C、Swift(了解中)|
 |Platform|Linux、macOS、iOS|
-|Github|[asvircc](https://github.com/asvircc asvircc) |
+|Github|[asvircc](https://github.com/asvircc) |
 |Email|asvircc#asvir.cc |
 
 
