@@ -33,7 +33,7 @@ author: asvircc
 ### 延伸
 1. 软件使用版本号主要是用来**追踪 BUG**、**标识产品**以及**方便沟通**。
 2. Xcode 中 TAGETS > General > Idntity 中 Version 对应 Info.plist 中 **[CFBundleShortVersionString][CFBundleShortVersionString_URL]** 的值，Build 对应 Info.plist 中 **[CFBundleVersion][CFBundleVersion_URL]** 的值。Version 对外，用户可见；Build 对内，用户不可见<br> 
-3. 建议 Build 和 Version 都使用三段式版本号，如 1.32.1 等。Build 在开发新版本时可以使用一些后缀d（develop）、a（alpha）、b（beta）、fc（final candidate）等，关于 Build 和 Version,三段式版本号可以可看下苹果 **[CFBundleVersion][CFBundleVersion_URL]** 和 **[CFBundleShortVersionString][CFBundleShortVersionString_URL]** 文档。
+3. 建议 Build 和 Version 都使用三段式版本号，如 1.32.1 等。在开发新版本时 Build 可以使用一些后缀d（develop）、a（alpha）、b（beta）、fc（final candidate）等，关于 Build 和 Version,三段式版本号可以可看下苹果 **[CFBundleVersion][CFBundleVersion_URL]** 和 **[CFBundleShortVersionString][CFBundleShortVersionString_URL]** 文档。
 4. 自动设置版本号
 	- **[agvtool][agvtool man page]**，苹果提供的自动设置 Build 和 Version 工具，**[使用方法][agvtool使用方法]**。
     - 还可以将脚本添加到 Build Phase 中实现自动设置 Build 和 Version（TAGETS > Build Phase > 左上角 `+` 图标 > New Run Script Phase），**[使用方法][设置Xcode下Version Build版本号自增长脚本]**。
