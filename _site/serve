@@ -1,4 +1,0 @@
-#!/bin/bash
-jekyll serve -P $PORT -H $IP
-
-#open http://127.0.0.1:4000
