@@ -35,4 +35,4 @@ It is the birthplace of you dreams<br>
 
 <audio 
 	autoplay="autoplay"
-	src="http://op7e8nyi8.bkt.clouddn.com/music/post/Daft%20Punk%20-%20Beyond.mp4"></audio> 
+	src="http://static.asvir.site/music/post/Daft%20Punk%20-%20Beyond.mp4"></audio> 
